@@ -40,7 +40,7 @@ resource "alicloud_instance" "instance" {
   instance_name              = "test_foo"
   vswitch_id                 = alicloud_vswitch.vsw.id
   internet_max_bandwidth_out = 10
-  passwd = "skyhellode123.."
+  password = "skyhellode123.."
 }
 
 resource "alicloud_security_group_rule" "allow_all_tcp" {
