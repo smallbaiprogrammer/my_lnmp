@@ -1,0 +1,8 @@
+- name: 移除mysql
+  shell: yum -y remove mysql
+- name: 安装mysql
+  shell: yum install -y mysql mysql-server mysql-devel
+- name: 验证是否安装成功
+  shell: rpm -qi mysql-server
+- name: 启动mysql服务
+  shell: systemctl enable mysqld && systemctl start mysqld

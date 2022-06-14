@@ -1,0 +1,12 @@
+- name: 安装yum源
+  shell: yum -y install epel-release && yum update
+- name: 安装nginx
+  shell: yum install -y nginx
+- name: 拷贝配文文件
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf
+- name: 拷贝php测试文件
+  template: src=index.php dest=/usr/share/nginx/html/index.php
+- name: 开机自启动
+  shell: systemctl enable nginx && systemctl start nginx
+- name: 开放80端口
+  shell: firewall-cmd --zone=public --add-port=80/tcp --permanent
