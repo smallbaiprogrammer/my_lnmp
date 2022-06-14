@@ -8,6 +8,10 @@ terraform {
 }
   provider "alicloud" {
     # Configuration options
+      access_key="LTAI5tLx8a7JJQU2UBwNwDtm"
+      secret_kEY="onYrXy31oxfD6ViYupskDdaHhFT22c"
+      region="cn-shenzhen"
+
   }
 
 resource "alicloud_vpc" "vpc" {
