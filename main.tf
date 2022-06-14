@@ -37,7 +37,7 @@ resource "alicloud_instance" "instance" {
   instance_type              = "ecs.n2.small"
   system_disk_category       = "cloud_efficiency"
   image_id                   = "centos_8_5_x64_20G_alibase_20220428.vhd"
-  instance_name              = "test_foo"
+  instance_name              = "web2"
   vswitch_id                 = alicloud_vswitch.vsw.id
   internet_max_bandwidth_out = 10
   password = "skyhellode123.."
