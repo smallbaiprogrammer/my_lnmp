@@ -34,7 +34,7 @@ resource "alicloud_instance" "instance" {
   availability_zone = "cn-shenzhen-b"
   security_groups   = alicloud_security_group.default.*.id
   # series III
-  instance_type              = "ecs.n4.small"
+  instance_type              = "ecs.n2.small"
   system_disk_category       = "cloud_efficiency"
   image_id                   = "centos_8_5_x64_20G_alibase_20220428.vhd"
   instance_name              = "test_foo"
